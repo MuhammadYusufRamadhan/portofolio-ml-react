@@ -1,0 +1,45 @@
+/* src/pages/SkillsPage.module.css */
+
+.skillsList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.skillItem {
+  color: var(--slate);
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.skillItem::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 1rem 1.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}

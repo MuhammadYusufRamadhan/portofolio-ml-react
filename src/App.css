@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+.mainContainer {
+  max-width: 1100px;  /* Lebar maksimum konten */
+  margin: 0 auto;     /* Membuatnya selalu di tengah */
+  padding: 0 2rem;    /* Memberi sedikit ruang di sisi kiri dan kanan */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +41,42 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.section {
+  padding: 80px 0; /* Memberi ruang napas antar section */
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: var(--lightest-slate);
+  width: 100%;
+}
+
+.sectionHeading::before {
+  content: '0' counter(section) '.';
+  counter-increment: section;
+  margin-right: 10px;
+  color: var(--accent-color);
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+}
+
+.sectionHeading::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 0px;
+  width: 200px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+
+/* Inisialisasi counter */
+body {
+  counter-reset: section;
 }

@@ -1,78 +1,75 @@
 /* src/components/ProjectCard.module.css */
-
 .card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  margin: 15px;
-  max-width: 350px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--light-navy);
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.7);
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
 }
 
 .projectImage {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
-  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(1) brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .projectImage {
+  filter: grayscale(0%) contrast(1) brightness(100%);
 }
 
 .content {
-  padding: 20px;
+  padding: 25px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .title {
-  margin-top: 0;
-  color: #333;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: var(--lightest-slate);
 }
 
 .description {
-  color: #666;
-  flex-grow: 1; /* Mendorong link ke bawah */
+  color: var(--slate);
+  font-size: 1rem;
+  flex-grow: 1;
 }
 
 .tags {
-  margin-bottom: 15px;
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 0.8rem;
 }
 
 .tag {
-  display: inline-block;
-  background: #eee;
-  padding: 5px 10px;
-  border-radius: 15px;
-  margin: 5px 5px 5px 0;
-  font-size: 12px;
+  color: var(--accent-color);
 }
 
 .linkContainer {
-  margin-top: auto; /* Mendorong container ini ke bagian paling bawah */
+  margin-top: auto;
+  text-align: right; /* Pindahkan ikon ke kanan */
 }
 
 .iconLink {
-  font-size: 26px;
-  color: #333;
-  margin-right: 15px;
+  font-size: 1.5rem; /* Sedikit lebih kecil */
+  color: var(--light-slate);
+  margin-left: 15px; /* Ganti dari margin-right */
   transition: color 0.2s ease;
 }
 
 .iconLink:hover {
-  color: #007bff;
+  color: var(--accent-color);
 }

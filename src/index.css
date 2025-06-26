@@ -2,25 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700&display=swap');
 
 :root {
-  --background-primary: #1a1a1a;
-  --background-secondary: #242424;
-  --text-primary: #e0e0e0;
-  --text-secondary: #b3b3b3;
-  --accent-color: #007bff;
-  --border-color: #444;
+  --dark-navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --accent-color: #64ffda; /* Biru Cyan Terang */
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  
   /* Terapkan warna dasar dari variabel */
-  background-color: var(--background-primary);
-  color: var(--text-primary);
+  background-color: var(--dark-navy);
+  color: var(--slate);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--lightest-slate);
 }
 
 
