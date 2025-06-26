@@ -6,6 +6,10 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Memastikan navbar di atas elemen lain */
+  backdrop-filter: blur(10px); /* Efek blur transparan (opsional) */
 }
 
 .link {

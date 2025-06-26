@@ -8,6 +8,15 @@
   padding: 2rem 4rem;
   gap: 3rem;
   background-color: #f8f9fa;
+  background: linear-gradient(45deg, #0d1a26, #1a1a1a, #2a0d2a);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .heroImage {
