@@ -1,0 +1,66 @@
+/* src/pages/HomePage.module.css */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px); /* Tinggi layar dikurangi tinggi navbar (kira-kira) */
+  padding: 2rem 4rem;
+  gap: 3rem;
+  background-color: #f8f9fa;
+}
+
+.heroImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.heroText {
+  max-width: 500px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #555;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    min-height: calc(100vh - 60px);
+    padding: 2rem 1rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,24 @@
+/* src/components/Footer.module.css */
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto; /* Mendorong footer ke bawah halaman */
+}
+
+.socialLinks {
+  margin-bottom: 1rem;
+}
+
+.socialIcon {
+  color: white;
+  font-size: 28px;
+  margin: 0 15px;
+  transition: color 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: #007bff;
+}
